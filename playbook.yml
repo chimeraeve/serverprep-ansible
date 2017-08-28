@@ -1,0 +1,10 @@
+- hosts: new-servers
+  become: yes
+
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - geerlingguy.security
+    - geerlingguy.ntp
+    - geerlingguy.firewall
